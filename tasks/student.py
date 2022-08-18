@@ -55,9 +55,13 @@ class Student:
         return self.average_score >= other
 
 
-lst = [Student("Добр", "Эмилия", 5, 7), Student("Алексеева", "Мария", 3, 9), Student("Поз", "Петер", 5, 5),
-       Student("Ломаш", "Дарья", 1, 3), Student("Козов", "Дмитрий", 1, 6)]
+lst = [Student("Добр", "Эмилия", 5, 7), Student("Алексеева", "Мария", 3, 9), Student("Поз", "Петер", 4, 5),
+       Student("Ломаш", "Дарья", 3, 3), Student("Козов", "Дмитрий", 1, 6)]
 
+for i in lst:
+    if isinstance(i, int):
+        lst = lst.sort()
+        print(lst)
 
 for i in lst:
     if i.average_score > 5:
